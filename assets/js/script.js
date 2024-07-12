@@ -12,3 +12,19 @@ function stickyHeader() {
         getS.style.backgroundColor = "#181919"
     }
 }
+const mElements = document.getElementsByTagName("g");
+const mElementsFiltered = Array.from(mElements).filter(
+  (element) => element.getAttribute("opacity") === "0"
+);
+mElementsFiltered.shift();
+
+const mAnimation = setInterval(() => {
+  const randomNum = Math.floor(Math.random() * mElementsFiltered.length);
+  const currentElement = mElementsFiltered[randomNum];
+  const currentOpacity = currentElement.getAttribute("opacity");
+  if (currentOpacity === "0") {
+    currentElement.setAttribute("opacity", 1);
+  } else if (currentOpacity === "1") {
+    currentElement.setAttribute("opacity", 0);
+  }
+}, 10);
