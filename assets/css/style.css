@@ -12,7 +12,7 @@ header {
     border-bottom: 1px solid #191919;
 }
 
-nav {
+#myNav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,7 +20,7 @@ nav {
     border-bottom: 1px solid #191919;
     position: sticky;
 	top:0;
-	z-index: 2;
+	z-index: 5;
 }
 
 nav .logo {
@@ -221,7 +221,7 @@ a.pill {
     /* Margine inferiore per distanziare i post */
 }
 .post-info2{
-	width: 90%;
+	width: 100%;
 }
 
 
@@ -279,9 +279,9 @@ a.pill {
 .post-image .bookmark {
     position: absolute;
     /* Posizionamento assoluto all'interno di .post-image */
-    bottom: 60px;
+    bottom: 30px;
     /* Posiziona l'SVG 5px dal basso */
-    left: 40px;
+    left: 20px;
     /* Posiziona l'SVG 5px dalla sinistra */
     width: 20px;
     /* Dimensione dell'SVG, regola la dimensione secondo necessità */
@@ -295,6 +295,7 @@ a.pill {
     height: 100%;
     /* Occupa tutta l'altezza disponibile */
     object-fit: cover;
+	padding-left:100px
 	
 
 }
